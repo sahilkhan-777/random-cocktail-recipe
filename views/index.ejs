@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cocktail Recipe</title>
+    <link rel="stylesheet" href="/styles/style.css">
+</head>
+<body>
+    <div class="site-container">
+        <img class="site-drink__thumbnail" src="<%= recipe.strDrinkThumb%>" alt="Drink Image" loading="lazy"/>
+        <h1 class="site-drink__title"><%= recipe.strDrink %></h1>
+        <ul class="site-drink__tags">
+            <li><%= recipe.strCategory %></li>
+            <li><%= recipe.strAlcoholic %></li>
+            <li><%= recipe.strGlass %></li>
+        </ul>
+        <section class="site-drink__info">
+            <p class="site-drink__instructions">Instructions: <%= recipe.strInstructions %></p>
+            <ol class="site-drink__ingredients">
+                <h4>Ingredients:</h4>
+                <% for(let i=1; i<=10; i++){ %>
+                    <% const ingredient = recipe[`strIngredient${i}`] %>
+                    <% if(ingredient) { %>
+                        <li><%= ingredient %></li>
+                    <% } %>
+                <% } %>
+            </ol>
+        </section>
+    </div>
+</body>
+</html>

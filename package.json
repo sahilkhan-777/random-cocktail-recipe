@@ -1,0 +1,27 @@
+{
+  "name": "random-cocktail-recipe",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sahilkhan-777/random-cocktail-recipe.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sahilkhan-777/random-cocktail-recipe/issues"
+  },
+  "homepage": "https://github.com/sahilkhan-777/random-cocktail-recipe#readme",
+  "dependencies": {
+    "axios": "^1.13.2",
+    "ejs": "^3.1.10",
+    "express": "^5.1.0"
+  }
+}
