@@ -1,0 +1,111 @@
+.site-hero{
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.site-hero__text{
+    position: absolute;
+    top: 15%;
+    left: 5%;
+}
+
+.site-hero__headline{
+    font-size: 4rem;
+    font-family: "Playfair Display", serif;
+    font-weight: medium;
+}
+
+.site-hero__tagline{
+    font-size: 1.5rem;
+}
+
+.site-hero__img{
+    width: 50%;
+}
+
+.site-featured{
+    display: flex;
+    gap: 2rem;
+    padding: 4rem;
+}
+
+.site-featured__headline{
+    font-size: 2rem;
+    font-family: "Playfair Display", serif;
+}
+
+.site-featured__recipes{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.site-featured__recipes--card-container{
+    display: flex;
+    gap: 1rem;
+}
+
+.site-featured__recipes--card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: black;
+}
+
+.site-featured__img{
+    height: 10rem;
+    width: 10rem;
+    border-radius: 50%;
+    border: 2px solid #f39d2e;
+}
+
+.site-featured__img--name{
+    font-family: "Montserrat", sans-serif;
+    font-size: 1rem;
+}
+
+.site-featured__inspirations{
+    padding: 0 4rem;
+    border-left: 2px solid #666666;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.site-featured__tagline{
+    font-family: "Sarina", cursive;
+    font-size: 2.5rem;
+    color: #f39d2e;
+    font-weight: normal;
+}
+
+.site-featured__subtext{
+    font-family: "Montserrat", sans-serif;
+}
+
+.site-featured__cta-button-container{
+    display: flex;
+    justify-content: center ;
+}
+
+.site-featured__cta-button{
+    text-decoration: none;
+    font-family: "Montserrat", sans-serif;
+    background: linear-gradient(to right, #ff8901, #be5f00);
+    padding: 1rem 3rem;
+    color: white;
+    font-size: 1.5rem;
+    border-radius: 35px;
+    transition: background-position 0.5s ease,
+    color 0.5s ease;
+    background-size: 200% 100%;
+    background-position: left center;
+}
+
+.site-featured__cta-button:hover{
+    background-position: right center;
+    color: #dddddd;
+}
