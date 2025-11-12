@@ -1,32 +1,39 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cocktail Recipe</title>
-    <link rel="stylesheet" href="/styles/style.css">
-</head>
-<body>
-    <div class="site-container">
-        <img class="site-drink__thumbnail" src="<%= recipe.strDrinkThumb%>" alt="Drink Image" loading="lazy"/>
-        <h1 class="site-drink__title"><%= recipe.strDrink %></h1>
-        <ul class="site-drink__tags">
-            <li><%= recipe.strCategory %></li>
-            <li><%= recipe.strAlcoholic %></li>
-            <li><%= recipe.strGlass %></li>
-        </ul>
-        <section class="site-drink__info">
-            <p class="site-drink__instructions">Instructions: <%= recipe.strInstructions %></p>
-            <ol class="site-drink__ingredients">
-                <h4>Ingredients:</h4>
-                <% for(let i=1; i<=10; i++){ %>
-                    <% const ingredient = recipe[`strIngredient${i}`] %>
-                    <% if(ingredient) { %>
-                        <li><%= ingredient %></li>
-                    <% } %>
-                <% } %>
-            </ol>
-        </section>
-    </div>
-</body>
-</html>
+<%- include('partials/header.ejs') %>
+    <section class="site-hero">
+        <div class="site-hero__text">
+            <h1 class="site-hero__headline">Discover Your<br>Next Favorite</h1>
+            <p class="site-hero__tagline">Explore hundreds of unique creations.</p>
+        </div>
+        <img src="/images/hero-image.webp" alt="hero image" class="site-hero__img">
+    </section>
+    <section class="site-featured">
+        <div class="site-featured__recipes">
+            <h3 class="site-featured__headline">Featured Recipes</h3>
+            <div class="site-featured__recipes--card-container">
+                <a href="" class="site-featured__recipes--card">
+                    <img src="/images/alabama-summer.webp" alt="Alabama Summer" class="site-featured__img">
+                    <p class="site-featured__img--name">Alabama Summer</p>
+                </a>
+                <a href="" class="site-featured__recipes--card">
+                    <img src="/images/Autodafé.webp" alt="Autodafé" class="site-featured__img">
+                    <p class="site-featured__img--name">Autodafé</p>
+                </a>
+                <a href="" class="site-featured__recipes--card">
+                    <img src="/images/gin-tonic.webp" alt="Gin Tonic" class="site-featured__img">
+                    <p class="site-featured__img--name">Gin Tonic</p>
+                </a>
+            </div>
+        </div>
+        <div class="site-featured__inspirations">
+            <h3 class="site-featured__headline">Weekly Inspirations</h3>
+            <h2 class="site-featured__tagline">The Art of Mixology</h2>
+            <p class="site-featured__subtext">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Odio, magni consequatur veritatis dolore laborum ipsa numquam sit totam.Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Odio, magni consequatur veritatis dolore laborum ipsa numquam sit totam.
+            </p>
+            <div class="site-featured__cta-button-container">
+                <a href="/random" class="site-featured__cta-button">Surprise Me!</a>
+            </div>
+        </div>
+    </section>
+    <%- include('partials/footer.ejs') %>
