@@ -9,7 +9,6 @@
 }
 
 body{
-    height: 100vh;
     scroll-behavior: smooth;
 }
 
@@ -18,6 +17,7 @@ body{
     justify-content: space-between;
     padding: 1.5rem;
     align-items: center;
+    width: 100%;
 }
 
 .site-logo{
