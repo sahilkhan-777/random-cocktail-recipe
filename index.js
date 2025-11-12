@@ -7,7 +7,11 @@ const port = 3000;
 app.use(express.static("public"));
 app.set("view engine", "ejs");
 
-app.get("/", async (req, res) => {
+app.get("/", (req, res) => {
+    res.render("index.ejs");
+})
+
+app.get("/random", async (req, res) => {
     try {
         const response = await axios.get("https://www.thecocktaildb.com/api/json/v1/1/random.php");
         const result = response.data;
@@ -15,7 +19,7 @@ app.get("/", async (req, res) => {
         // console.log(result.drinks[0]);
         // console.log(result.drinks[0].strDrink);
 
-        res.render("index.ejs", { recipe : result.drinks[0] });
+        res.render("random.ejs", { recipe : result.drinks[0] });
     }
     catch(error){
         console.error(`Error: ${error.message}`);
