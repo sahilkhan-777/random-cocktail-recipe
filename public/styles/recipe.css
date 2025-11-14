@@ -1,0 +1,80 @@
+.site-recipes__container {
+    padding: 2.5rem 4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.site-recipes__hero {
+    display: flex;
+    gap: 5rem;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.site-drink__title {
+    font-family: "Playfair Display", serif;
+    font-size: 4rem;
+    margin-bottom: 1.5rem;
+}
+
+.site-drink__thumbnail {
+    max-width: 450px;
+    width: 100%;
+}
+
+ul {
+    list-style: none;
+}
+
+.site-drink__tags {
+    width: 100%;
+    display: flex;
+    gap: 0.5rem;
+}
+
+.site-drink__tags li {
+    background-color: #f39d2e;
+    border: 2px solid #8b4f00;
+    padding: 0.5rem 1rem;
+    font-family: "Montserrat", sans-serif;
+    color: white;
+    font-weight: 500;
+}
+
+.site-ingredients__title,
+.site-instructions__title {
+    font-family: "Playfair Display", sans-serif;
+    font-size: 2rem;
+}
+
+.site-instructions__body,
+.site-ingredients__list {
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.2rem;
+    line-height: 1.5;
+}
+
+.site-ingredients__list {
+    margin: 0.5rem 1.5rem;
+}
+
+@media (max-width: 780px) {
+    .site-recipes__hero {
+        flex-direction: column;
+    }
+
+    .site-drink__title {
+        font-size: 2rem;
+    }
+
+    .site-ingredients__title,
+    .site-instructions__title {
+        font-size: 1.5rem;
+    }
+
+    .site-instructions__body,
+    .site-ingredients__list {
+        font-size: 1rem;
+    }
+}

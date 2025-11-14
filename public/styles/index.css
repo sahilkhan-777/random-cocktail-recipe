@@ -1,26 +1,26 @@
-.site-hero{
+.site-home__hero{
     display: flex;
     justify-content: center;
     position: relative;
 }
 
-.site-hero__text{
+.site-home__hero--text{
     position: absolute;
     top: 15%;
     left: 5%;
 }
 
-.site-hero__headline{
+.site-home__hero--headline{
     font-size: 4rem;
     font-family: "Playfair Display", serif;
     font-weight: medium;
 }
 
-.site-hero__tagline{
+.site-home__hero--tagline{
     font-size: 1.5rem;
 }
 
-.site-hero__img{
+.site-home__hero--img{
     width: 50%;
 }
 
@@ -108,4 +108,65 @@
 .site-featured__cta-button:hover{
     background-position: right center;
     color: #dddddd;
+}
+
+@media (max-width: 780px){
+    .site-header{
+        position: relative;
+        margin-bottom: 5rem;
+    }
+
+    .site-header__form{
+        position: absolute;
+        top: 80px;
+        left: 15%;
+    }
+
+    .site-header__form input[type="search"]{
+        width: 200px;
+    }
+
+    .site-home__hero{
+        justify-content: flex-end;
+    }
+
+    .site-home__hero--headline{
+        font-size: 2rem;
+    }
+
+    .site-home__hero--tagline{
+        font-size: 1rem;
+    }
+
+    .site-featured{
+        flex-direction: column;
+    }
+
+    .site-featured__headline{
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    .site-featured__recipes--card-container{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .site-featured__inspirations{
+        border: none;
+        border-top: 2px solid #666666;
+        padding: 0;
+    }
+
+    .site-featured__headline{
+        margin-top: 1rem;
+    }
+
+    .site-featured__cta-button-container{
+        margin-top: 1rem;
+    }
+
+    .site-featured__cta-button{
+        font-size: 1rem;
+    }
 }
