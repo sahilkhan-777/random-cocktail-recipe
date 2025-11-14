@@ -1,24 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cocktail Recipe</title>
     <link rel="stylesheet" href="/styles/style.css">
     <link rel="stylesheet" href="/styles/index.css">
-    <link rel="stylesheet" href="/styles/random.css">
+    <link rel="stylesheet" href="/styles/recipe.css">
     <link rel="stylesheet" href="/styles/browse.css">
 </head>
+
 <body>
     <header class="site-header">
         <div class="site-logo">
             <img src="/images/logo.webp" alt="logo image" class="site-logo__img">
             <h3 class="site-logo__text">Cocktail Recipes</h3>
         </div>
+        <form action="/search" class="site-header__form">
+            <input type="search" name="name" id="name" placeholder="Search Recipe by name..." required>
+            <input type="submit" value="Search">
+        </form>
         <ul class="site-navbar">
-            <li class="site-navbar__item"><a href="/">Home</a></li>
-            <li class="site-navbar__item"><a href="/browse">Browse Recipes</a></li>
-            <li class="site-navbar__item"><a href="/create">Create Your Own</a></li>
+            <li class="site-navbar__item">
+                <a href="/">Home</a>
+            </li>
         </ul>
     </header>
     <main>
