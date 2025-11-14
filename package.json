@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "index.js"
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",
@@ -21,6 +21,7 @@
   "homepage": "https://github.com/sahilkhan-777/random-cocktail-recipe#readme",
   "dependencies": {
     "axios": "^1.13.2",
+    "body-parser": "^2.2.0",
     "ejs": "^3.1.10",
     "express": "^5.1.0"
   }
