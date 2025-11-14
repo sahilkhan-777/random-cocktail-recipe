@@ -30,6 +30,9 @@ A cocktaik recipe web app that lets users search recipes by name, view featured 
 
 --- 
 
+## Future Improvements
+- Add other search filters (type, category, glass, ingredient).
+
 ## Live Preview
 [Live Link](https://random-cocktail-recipe.onrender.com)
 
