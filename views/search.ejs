@@ -1,0 +1,44 @@
+<%- include('partials/header.ejs') %>
+    <% for (let i=0; i < recipe.length; i++) { %>
+        <div class="site-recipes__container">
+            <section class="site-recipes__hero">
+                <img class="site-drink__thumbnail" src="<%= recipe[i].strDrinkThumb%>" alt="Drink Image"
+                    loading="lazy" />
+                <div class="site-drink__information">
+                    <h1 class="site-drink__title">
+                        <%= recipe[i].strDrink %>
+                    </h1>
+                    <ul class="site-drink__tags">
+                        <li>
+                            <%= recipe[i].strCategory %>
+                        </li>
+                        <li>
+                            <%= recipe[i].strAlcoholic %>
+                        </li>
+                        <li>
+                            <%= recipe[i].strGlass %>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <section class="site-instruction">
+                <h3 class="site-instructions__title">Instructions</h3>
+                <p class="site-instructions__body">Instructions: <%= recipe[i].strInstructions %>
+                </p>
+            </section>
+            <section class="site-ingredients">
+                <h3 class="site-ingredients__title">Ingredients</h3>
+                <ol class="site-ingredients__list">
+                    <% for(let j=1; j<=10; j++){ %>
+                        <% const ingredient=recipe[i][`strIngredient${j}`] %>
+                            <% if(ingredient) { %>
+                                <li>
+                                    <%= ingredient %>
+                                </li>
+                                <% } %>
+                                    <% } %>
+                </ol>
+            </section>
+        </div>
+        <% } %>
+            <%- include('partials/footer.ejs') %>
