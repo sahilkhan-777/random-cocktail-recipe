@@ -1,23 +1,41 @@
 <%- include('partials/header.ejs') %>
-    <div class="site-container">
-        <img class="site-drink__thumbnail" src="<%= recipe.strDrinkThumb%>" alt="Drink Image" loading="lazy"/>
-        <h1 class="site-drink__title"><%= recipe.strDrink %></h1>
-        <ul class="site-drink__tags">
-            <li><%= recipe.strCategory %></li>
-            <li><%= recipe.strAlcoholic %></li>
-            <li><%= recipe.strGlass %></li>
-        </ul>
-        <section class="site-drink__info">
-            <p class="site-drink__instructions">Instructions: <%= recipe.strInstructions %></p>
-            <ol class="site-drink__ingredients">
-                <h4>Ingredients:</h4>
-                <% for(let i=1; i<=10; i++){ %>
-                    <% const ingredient = recipe[`strIngredient${i}`] %>
-                    <% if(ingredient) { %>
-                        <li><%= ingredient %></li>
-                    <% } %>
-                <% } %>
+    <div class="site-recipes__container">
+        <section class="site-recipes__hero">
+            <img class="site-drink__thumbnail" src="<%= recipe.strDrinkThumb%>" alt="Drink Image" loading="lazy" />
+            <div class="site-drink__information">
+                <h1 class="site-drink__title">
+                    <%= recipe.strDrink %>
+                </h1>
+                <ul class="site-drink__tags">
+                    <li>
+                        <%= recipe.strCategory %>
+                    </li>
+                    <li>
+                        <%= recipe.strAlcoholic %>
+                    </li>
+                    <li>
+                        <%= recipe.strGlass %>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section class="site-instruction">
+            <h3 class="site-instructions__title">Instructions</h3>
+            <p class="site-instructions__body">Instructions: <%= recipe.strInstructions %>
+            </p>
+        </section>
+        <section class="site-ingredients">
+            <h3 class="site-ingredients__title">Ingredients</h3>
+            <ol class="site-ingredients__list">
+                <% for(let i=0; i<=10; i++){ %>
+                    <% const ingredient=recipe[`strIngredient${i}`] %>
+                        <% if(ingredient) { %>
+                            <li>
+                                <%= ingredient %>
+                            </li>
+                            <% } %>
+                                <% } %>
             </ol>
         </section>
     </div>
-<%- include('partials/footer.ejs') %>
+    <%- include('partials/footer.ejs') %>
