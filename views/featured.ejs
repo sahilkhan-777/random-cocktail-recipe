@@ -1,0 +1,41 @@
+<%- include('partials/header.ejs') %>
+    <div class="site-recipes__container">
+        <section class="site-recipes__hero">
+            <img class="site-drink__thumbnail" src="<%= recipe[0].strDrinkThumb%>" alt="Drink Image" loading="lazy" />
+            <div class="site-drink__information">
+                <h1 class="site-drink__title">
+                    <%= recipe[0].strDrink %>
+                </h1>
+                <ul class="site-drink__tags">
+                    <li>
+                        <%= recipe[0].strCategory %>
+                    </li>
+                    <li>
+                        <%= recipe[0].strAlcoholic %>
+                    </li>
+                    <li>
+                        <%= recipe[0].strGlass %>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section class="site-instruction">
+            <h3 class="site-instructions__title">Instructions</h3>
+            <p class="site-instructions__body">Instructions: <%= recipe[0].strInstructions %>
+            </p>
+        </section>
+        <section class="site-ingredients">
+            <h3 class="site-ingredients__title">Ingredients</h3>
+            <ol class="site-ingredients__list">
+                <% for(let i=0; i<=10; i++){ %>
+                    <% const ingredient=recipe[0][`strIngredient${i}`] %>
+                        <% if(ingredient) { %>
+                            <li>
+                                <%= ingredient %>
+                            </li>
+                            <% } %>
+                                <% } %>
+            </ol>
+        </section>
+    </div>
+    <%- include('partials/footer.ejs') %>
