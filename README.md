@@ -1,14 +1,21 @@
 # Random Cocktail Recipe
 
-A simple web app that generates a **random cocktail recipe** everytime the page loads. Built with Node.js, Express and Ejs - it fetches data dynamically from the [TheCocktailDBAPI](https://www.thecocktaildb.com/)
+A cocktaik recipe web app that lets users search recipes by name, view featured cocktails, and get a a **random drink recipe** with a single click. Built with Node.js, Express and Ejs - it fetches data dynamically from the [TheCocktailDBAPI](https://www.thecocktaildb.com/)
 
 ---
 
 ## Features
-- Displays a random cocktail recipe with its name, image, ingredients, and instructions.
-- Fetches live data from an external cocktail API.
-- Dynamically renders ingredients in a clean list format.
-- Simple, responsive UI using custom CSS.
+
+**Search Bar**
+- User can type a cocktail name and instantly get detailed recipes.
+
+**Home Page**
+- Shows three featured cocktails.
+- Each featured card links to its detail page.
+- Responsive UI using custom CSS.
+
+**Surprise Me Button**
+- On click displays a random cocktail recipe with its name, image, ingredients, and instructions.
 
 ## Tech stack
 
