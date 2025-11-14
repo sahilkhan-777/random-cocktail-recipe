@@ -1,24 +1,24 @@
 <%- include('partials/header.ejs') %>
-    <section class="site-hero">
-        <div class="site-hero__text">
-            <h1 class="site-hero__headline">Discover Your<br>Next Favorite</h1>
-            <p class="site-hero__tagline">Explore hundreds of unique creations.</p>
+    <section class="site-home__hero">
+        <div class="site-home__hero--text">
+            <h1 class="site-home__hero--headline">Discover Your<br>Next Favorite</h1>
+            <p class="site-home__hero--tagline">Explore hundreds of unique creations.</p>
         </div>
-        <img src="/images/hero-image.webp" alt="hero image" class="site-hero__img">
+        <img src="/images/hero-image.webp" alt="hero image" class="site-home__hero--img">
     </section>
     <section class="site-featured">
         <div class="site-featured__recipes">
             <h3 class="site-featured__headline">Featured Recipes</h3>
             <div class="site-featured__recipes--card-container">
-                <a href="" class="site-featured__recipes--card">
-                    <img src="/images/alabama-summer.webp" alt="Alabama Summer" class="site-featured__img">
-                    <p class="site-featured__img--name">Alabama Summer</p>
+                <a href="/alabama" class="site-featured__recipes--card">
+                    <img src="/images/alabama-summer.webp" alt="Alabama Slammer" class="site-featured__img">
+                    <p class="site-featured__img--name">Alabama Slammer</p>
                 </a>
-                <a href="" class="site-featured__recipes--card">
+                <a href="/autodafe" class="site-featured__recipes--card">
                     <img src="/images/Autodafé.webp" alt="Autodafé" class="site-featured__img">
                     <p class="site-featured__img--name">Autodafé</p>
                 </a>
-                <a href="" class="site-featured__recipes--card">
+                <a href="/gin" class="site-featured__recipes--card">
                     <img src="/images/gin-tonic.webp" alt="Gin Tonic" class="site-featured__img">
                     <p class="site-featured__img--name">Gin Tonic</p>
                 </a>
@@ -28,7 +28,8 @@
             <h3 class="site-featured__headline">Weekly Inspirations</h3>
             <h2 class="site-featured__tagline">The Art of Mixology</h2>
             <p class="site-featured__subtext">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Odio, magni consequatur veritatis dolore laborum ipsa numquam sit totam.Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Odio, magni consequatur veritatis dolore laborum ipsa numquam sit totam.Lorem ipsum dolor sit amet
+                consectetur adipisicing elit.
                 Odio, magni consequatur veritatis dolore laborum ipsa numquam sit totam.
             </p>
             <div class="site-featured__cta-button-container">
@@ -36,4 +37,5 @@
             </div>
         </div>
     </section>
+
     <%- include('partials/footer.ejs') %>
