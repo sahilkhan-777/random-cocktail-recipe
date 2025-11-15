@@ -1,4 +1,5 @@
 <%- include('partials/header.ejs') %>
+<% if (locals.recipe) { %>
     <% for (let i=0; i < recipe.length; i++) { %>
         <div class="site-recipes__container">
             <section class="site-recipes__hero">
@@ -39,6 +40,12 @@
                                     <% } %>
                 </ol>
             </section>
+        </div>
+        <% } %>
+    <% } else { %>
+        <div class="error-container">
+            <img src="/images/undraw_page-not-found_6wni.svg" alt="Not Found">
+            <h1>Uh Oh! No Cocktail found</h1>
         </div>
         <% } %>
             <%- include('partials/footer.ejs') %>
