@@ -88,7 +88,7 @@
 
 .site-featured__cta-button-container{
     display: flex;
-    justify-content: center ;
+    justify-content: center;
 }
 
 .site-featured__cta-button{
@@ -140,6 +140,7 @@
 
     .site-featured{
         flex-direction: column;
+        padding: 2rem;
     }
 
     .site-featured__headline{
@@ -148,18 +149,30 @@
     }
 
     .site-featured__recipes--card-container{
+        margin-top: 1rem;
         flex-wrap: wrap;
         justify-content: center;
+        text-align: center;
+    }
+
+    .site-featured__recipes--card img{
+        height: 100px;
+        width: 100px;
     }
 
     .site-featured__inspirations{
         border: none;
         border-top: 2px solid #666666;
         padding: 0;
+        text-align: center;
     }
 
     .site-featured__headline{
         margin-top: 1rem;
+    }
+
+    .site-featured__tagline{
+        font-size: 1.5rem;
     }
 
     .site-featured__cta-button-container{
@@ -168,5 +181,12 @@
 
     .site-featured__cta-button{
         font-size: 1rem;
+    }
+
+    .site-footer{
+        flex-direction: column;
+        font-size: 0.8rem;
+        gap: 10px;
+        text-align: center;
     }
 }
