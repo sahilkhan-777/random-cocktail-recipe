@@ -98,4 +98,12 @@ ul {
     .site-ingredients__list {
         font-size: 1rem;
     }
+
+    .error-container img{
+        max-width: 200px;
+    }
+
+    .error-container h1{
+        font-size: 1.5rem;
+    }
 }
