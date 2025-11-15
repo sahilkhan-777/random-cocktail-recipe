@@ -26,16 +26,30 @@
         </section>
         <section class="site-ingredients">
             <h3 class="site-ingredients__title">Ingredients</h3>
-            <ol class="site-ingredients__list">
+            <table class="site-ingredients__table">
+                <tr class="table-heading">
+                    <th>Item</th>
+                    <th>Quantity</th>
+                </tr>
                 <% for(let i=0; i<=10; i++){ %>
                     <% const ingredient=recipe[0][`strIngredient${i}`] %>
-                        <% if(ingredient) { %>
-                            <li>
-                                <%= ingredient %>
-                            </li>
-                            <% } %>
+                        <% const measure=recipe[0][`strMeasure${i}`] %>
+                            <% if(ingredient) { %>
+                                <tr>
+                                    <td>
+                                        <%= ingredient %>
+                                    </td>
+                                    <td>
+                                        <% if (measure) { %>
+                                            <%= measure %>
+                                        <% } else { %>
+                                            -
+                                        <% } %>
+                                    </td>
+                                </tr>
                                 <% } %>
-            </ol>
+                                    <% } %>
+            </table>
         </section>
     </div>
     <%- include('partials/footer.ejs') %>
