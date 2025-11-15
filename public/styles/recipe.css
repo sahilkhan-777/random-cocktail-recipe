@@ -49,10 +49,21 @@ ul {
 }
 
 .site-instructions__body,
-.site-ingredients__list {
+.site-ingredients__table {
     font-family: "Montserrat", sans-serif;
     font-size: 1.2rem;
     line-height: 1.5;
+}
+.site-ingredients__table{
+    width: 100%;
+    border-collapse: collapse;
+}
+table, th, td{
+    border: 1px solid;
+}
+
+th, td{
+    padding: 10px;
 }
 
 .error-container{
@@ -80,6 +91,11 @@ ul {
     margin: 0.5rem 1.5rem;
 }
 
+.site-ingredients__list li{
+    display: flex;
+    justify-content: space-between;
+}
+
 @media (max-width: 780px) {
     .site-recipes__hero {
         flex-direction: column;
@@ -89,14 +105,22 @@ ul {
         font-size: 2rem;
     }
 
+    .site-drink__tags{
+        flex-wrap: wrap;
+    }
+
     .site-ingredients__title,
     .site-instructions__title {
         font-size: 1.5rem;
     }
 
     .site-instructions__body,
-    .site-ingredients__list {
+    .site-ingredients__table {
         font-size: 1rem;
+    }
+
+    .site-ingredients{
+        padding: 0;
     }
 
     .error-container img{
